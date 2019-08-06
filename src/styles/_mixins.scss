@@ -1,0 +1,29 @@
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin start_of_calendar() {
+  @each $day in $list-of-days {
+    $i: index($list-of-days, $day);
+    .calendar-#{$day} div:first-child {
+      grid-column-start: #{$i};
+    }
+  }
+}
+
+@mixin end_of_calendar() {
+  @for $i from 28 through 30 {
+    .calendar-#{$i} div:nth-child(#{$i}) ~ div {
+      display: none;
+    }
+  }
+}
