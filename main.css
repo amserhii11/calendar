@@ -1,14 +1,8 @@
 body {
   background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  justify-content: center;
+  align-items: center; }
 
 .calendar {
   display: grid;
@@ -17,21 +11,13 @@ body {
   counter-reset: list-of-days; }
   .calendar div {
     counter-increment: list-of-days;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     border: 1px solid black;
     background-color: #eee;
-    -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    justify-content: center;
+    align-items: center; }
     .calendar div::after {
       content: counter(list-of-days);
       font-size: 30px;
@@ -39,8 +25,7 @@ body {
     .calendar div:hover {
       cursor: pointer;
       background-color: pink;
-      -webkit-transform: translateY(-20px);
-              transform: translateY(-20px); }
+      transform: translateY(-20px); }
 
 .calendar-mon div:first-child {
   grid-column-start: 1; }
